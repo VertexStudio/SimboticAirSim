@@ -1,0 +1,1 @@
+$HOME/UE4_21/Engine/Binaries/Linux/UE4Editor $(pwd)/Simbotic.uproject
