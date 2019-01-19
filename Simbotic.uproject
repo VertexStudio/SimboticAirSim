@@ -1,0 +1,13 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{0003336F-08D6-4FDA-E734-03F085CF4EA4}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "Simbotic",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
