@@ -7,7 +7,16 @@
 		{
 			"Name": "Simbotic",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+            "AdditionalDependencies": [
+                "AirSim"
+            ]
 		}
-	]
+	],
+    "Plugins": [
+        {
+            "Name": "AirSim",
+            "Enabled": true
+        }
+    ]
 }

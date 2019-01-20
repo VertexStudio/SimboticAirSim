@@ -1,0 +1,7 @@
+[submodule "Plugins/UnrealEnginePython"]
+	path = Plugins/UnrealEnginePython
+	url = git@github.com:VertexStudio/UnrealEnginePython.git
+
+[submodule "Plugins/AirSim"]
+	path = Plugins/AirSim
+	url = git@github.com:VertexStudio/UE4-AirSim.git
