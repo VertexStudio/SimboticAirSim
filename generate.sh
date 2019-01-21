@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 echo "Generating Simbotic project files"
 echo "----------------------"
-$HOME/UE4_21/GenerateProjectFiles.sh -project=$(pwd)/Simbotic.uproject -game -engine -Makefile -vscode
+$SIMBOTIC_UE4/GenerateProjectFiles.sh -project=$SIMBOTIC_ROOT/Simbotic.uproject -game -engine -Makefile -vscode
