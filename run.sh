@@ -1,1 +1,2 @@
-$HOME/UE4_21/Engine/Binaries/Linux/UE4Editor $(pwd)/Simbotic.uproject
+#!/usr/bin/env bash
+"$SIMBOTIC_UE4"/Engine/Binaries/Linux/UE4Editor "$SIMBOTIC_ROOT"/Simbotic.uproject
