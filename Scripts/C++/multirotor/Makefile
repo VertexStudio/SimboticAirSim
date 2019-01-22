@@ -1,8 +1,9 @@
 CXX        := 	clang++-5.0
-CXXFLAGS   := 	-Wall -Wextra -stdlib=libc++ -std=c++14 -isystem
+CXXFLAGS   := 	-Wall -Wextra -std=c++14 -fPIC -isystem
 LDFLAGS    := 	-stdlib=libc++ -lc++ -lc++abi -lm -lc -lpthread \
 				-lAirLib -lrpc -lMavLinkCom \
-				-L$(SIMBOTIC_ROOT)/Plugins/AirSim/Source/AirLib/lib/x64/Debug
+				-L$(SIMBOTIC_ROOT)/Plugins/AirSim/Source/AirLib/lib/x64/Debug \
+				-L$(SIMBOTIC_UE4)/Engine/Source/ThirdParty/Linux/LibCxx/lib/Linux/x86_64-unknown-linux-gnu
 BUILD      := 	./build
 OBJ_DIR    := 	$(BUILD)
 TARGET     := 	multirotor
@@ -10,7 +11,7 @@ INCLUDE    := 	-I./ \
 				-I$(SIMBOTIC_ROOT)/Plugins/AirSim/Source/AirLib/include \
 				-I$(SIMBOTIC_ROOT)/Plugins/AirSim/Source/AirLib/deps/rpclib/include \
 				-I$(SIMBOTIC_ROOT)/Plugins/AirSim/Source/AirLib/deps/eigen3 \
-				-I/usr/include/libcxxabi \
+				-I$(SIMBOTIC_UE4)//Engine/Source/ThirdParty/Linux/LibCxx/include/c++/v1 \
 				-I/usr/include
 
 SRC        := $(wildcard *.cpp)

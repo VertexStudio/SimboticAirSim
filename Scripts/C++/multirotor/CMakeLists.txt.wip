@@ -1,0 +1,35 @@
+cmake_minimum_required(VERSION 3.12)
+project (multirotor)
+
+# other flags used in Unreal: -funwind-tables  -fdiagnostics-format=msvc -fno-inline  -Werror -fno-omit-frame-pointer  -fstack-protector -O2
+# TODO: add back -Wunused-parameter -Wno-documentation after rpclib can be compiled
+set(CMAKE_CXX_FLAGS "\
+    -std=c++14 -ggdb -Wall -Wextra -Wstrict-aliasing -Wunreachable-code -Wcast-qual -Wctor-dtor-privacy \
+    -Wdisabled-optimization -Wformat=2 -Winit-self -Wmissing-include-dirs -Wswitch-default \
+    -Wold-style-cast -Woverloaded-virtual -Wredundant-decls -Wshadow -Wstrict-overflow=5 -Wswitch-default -Wundef \
+    -Wno-variadic-macros -Wno-parentheses -Wno-unused-function -Wno-unused -Wno-documentation -fdiagnostics-show-option \
+    -pthread \
+    ${RPC_LIB_DEFINES} ${CMAKE_CXX_FLAGS}"
+)
+
+# removed -lsupc++ from below (Git issue # 678)
+set(CMAKE_EXE_LINKER_FLAGS "\
+    ${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++abi \
+    -L ${LIBCXX_LIB_PATH} -rpath ${LIBCXX_LIB_PATH}")
+ 
+#For the shared library:
+#set ( PROJECT_LINK_LIBS libtestStudent.so )
+#link_directories( ~/exploringBB/extras/cmake/studentlib_shared/build )
+ 
+#For the static library:
+set ( PROJECT_LINK_LIBS libAirLib.a librpc.a )
+link_directories( /spaces/Simbotic/Plugins/AirSim/Source/AirLib/lib/x64/Debug )
+ 
+include_directories(
+    /spaces/Simbotic/Plugins/AirSim/Source/AirLib/include
+    /spaces/Simbotic/Plugins/AirSim/Source/AirLib/deps/eigen3
+    /usr/include/libcxxabi
+)
+ 
+add_executable(multirotor multirotor.cpp)
+target_link_libraries(multirotor ${PROJECT_LINK_LIBS} )
