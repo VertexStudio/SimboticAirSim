@@ -88,6 +88,18 @@ Create or modify `~/Documents/AirSim/settings.json` to configure simulation:
   }
 }
 ```
+
+### Settings.json
+Set a different `settings.json` location path by setting *SIMBOTIC_AIRSIM_SETTINGS* environment variable:
+```
+export SIMBOTIC_AIRSIM_SETTINGS=/path/to/settings_file
+```
+Or by providing it when running the simulation:
+```
+./run.sh /path/to/settings_file
+```
+Example: `./run.sh /home/projects/airsim_configs`  
+
 For more info visit [AirSim Settings](https://github.com/Microsoft/AirSim/blob/master/docs/settings.md)
 
 Run Simbotic and hit Play in Editor, then
