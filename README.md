@@ -27,11 +27,37 @@ git lfs install
 
 For more info visit [Git LFS](https://git-lfs.github.com/)
 
-### Get Simbotic (this repo)
+### Setup Simbotic (this repo)
 
+Clone repo:
 ```
 git clone git@github.com:VertexStudio/Simbotic.git --recursive
 ```
+
+Environment variables:
+
+```
+export SIMBOTIC_UE4=/path/to/UE4_21
+export SIMBOTIC_ROOT=/path/to/Simbotic
+```
+
+Generate project files and build:
+```
+cd $SIMBOTIC_ROOT
+./generate.sh
+./build.sh
+```
+
+Run sim:
+```
+./run.sh
+```
+
+Debug sim:
+```
+./debug.sh
+```
+
 
 ### Test multi-agent script
 
@@ -64,10 +90,11 @@ Create or modify `~/Documents/AirSim/settings.json` to configure simulation:
 ```
 For more info visit [AirSim Settings](https://github.com/Microsoft/AirSim/blob/master/docs/settings.md)
 
+Run Simbotic and hit Play in Editor, then
 Run script:
 
 ```
-cd Simbotic/Scripts/Python
+cd $SIMBOTIC_ROOT/Scripts/Python
 python python multiagent.py
 ```
 
