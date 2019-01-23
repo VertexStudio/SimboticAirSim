@@ -66,7 +66,7 @@ First time setup:
 pip install msgpack-rpc-python
 ```
 
-Create or modify `~/Documents/AirSim/settings.json` to configure simulation:
+Modify `$SIMBOTIC_ROOT/Config/AirSim/settings.json` to configure the simulation. By default it looks like the following:
 ```
 {
   "SettingsVersion": 1.2,
@@ -88,6 +88,9 @@ Create or modify `~/Documents/AirSim/settings.json` to configure simulation:
   }
 }
 ```
+### Settings.json
+Set a different `settings.json` location path by changing the `SIMBOTIC_SETTINGS_PATH` variable inside the `run.sh` file.  
+
 For more info visit [AirSim Settings](https://github.com/Microsoft/AirSim/blob/master/docs/settings.md)
 
 Run Simbotic and hit Play in Editor, then
@@ -95,7 +98,7 @@ Run script:
 
 ```
 cd $SIMBOTIC_ROOT/Scripts/Python
-python python multiagent.py
+python3 multiagent.py
 ```
 
 For more info visit [AirSim APIs](https://github.com/Microsoft/AirSim/blob/master/docs/apis.md)
