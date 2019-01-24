@@ -31,7 +31,7 @@ For more info visit [Git LFS](https://git-lfs.github.com/)
 
 Clone repo:
 ```
-git clone git@github.com:VertexStudio/Simbotic.git --recursive
+git clone git@github.com:VertexStudio/Simbotic.git
 ```
 
 Environment variables:
@@ -45,7 +45,6 @@ Generate project files and build:
 ```
 cd $SIMBOTIC_ROOT
 ./generate.sh
-./build_airsim.sh
 ./build.sh
 ```
 
@@ -105,6 +104,13 @@ python3 multiagent.py
 For C++ example check out: [Multirotor](https://github.com/VertexStudio/AirSim/blob/3cff53b172fc1a3edd373d257f451dd388091799/Multirotor/main.cpp).
 
 For more info visit [AirSim APIs](https://github.com/Microsoft/AirSim/blob/master/docs/apis.md)
+
+### Building AirSim
+Required if new changes were made to the [AirSim plugin](https://github.com/VertexStudio/AirSim).
+
+```
+./build_airsim.sh
+```
 
 ### Aditional Info
 
