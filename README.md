@@ -46,6 +46,7 @@ Generate project files and build:
 cd $SIMBOTIC_ROOT
 ./generate.sh
 ./build.sh
+./build_airsim.sh
 ```
 
 Run sim:
@@ -59,7 +60,7 @@ Debug sim:
 ```
 
 
-### Test multi-agent script
+### Test simulation script
 
 First time setup:
 ```
@@ -88,8 +89,8 @@ Modify `$SIMBOTIC_ROOT/Config/AirSim/settings.json` to configure the simulation.
   }
 }
 ```
-### Settings.json
-Set a different `settings.json` location path by changing the `SIMBOTIC_SETTINGS_PATH` variable inside the `run.sh` file.  
+
+To point to a different `settings.json` edit `run.sh`.
 
 For more info visit [AirSim Settings](https://github.com/Microsoft/AirSim/blob/master/docs/settings.md)
 
@@ -100,6 +101,8 @@ Run script:
 cd $SIMBOTIC_ROOT/Scripts/Python
 python3 multiagent.py
 ```
+
+For C++ example check out: [Multirotor] (https://github.com/VertexStudio/AirSim/blob/3cff53b172fc1a3edd373d257f451dd388091799/Multirotor/main.cpp).
 
 For more info visit [AirSim APIs](https://github.com/Microsoft/AirSim/blob/master/docs/apis.md)
 
