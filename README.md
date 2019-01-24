@@ -45,8 +45,8 @@ Generate project files and build:
 ```
 cd $SIMBOTIC_ROOT
 ./generate.sh
-./build.sh
 ./build_airsim.sh
+./build.sh
 ```
 
 Run sim:
