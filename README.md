@@ -1,8 +1,8 @@
 # Simbotic
+
 ## Simulation Engine for Multi-Agent Autonomy
 
-
-![Alt text](Assets/capture.png?raw=true "Simbotic Simulation Engine")
+![Simbotic](Assets/capture.png?raw=true "Simbotic Simulation Engine")
 
 ## Setup Instructions
 
@@ -30,6 +30,7 @@ For more info visit [Git LFS](https://git-lfs.github.com/)
 ### Setup Simbotic (this repo)
 
 Clone repo:
+
 ```
 git clone git@github.com:VertexStudio/Simbotic.git
 ```
@@ -42,31 +43,36 @@ export SIMBOTIC_ROOT=/path/to/Simbotic
 ```
 
 Generate project files and build:
+
 ```
 cd $SIMBOTIC_ROOT
 ./generate.sh
+./build_airsim.sh
 ./build.sh
 ```
 
 Run sim:
+
 ```
 ./run.sh
 ```
 
 Debug sim:
+
 ```
 ./debug.sh
 ```
 
-
 ### Test simulation script
 
 First time setup:
+
 ```
 pip install msgpack-rpc-python
 ```
 
 Modify `$SIMBOTIC_ROOT/Config/AirSim/settings.json` to configure the simulation. By default it looks like the following:
+
 ```
 {
   "SettingsVersion": 1.2,
@@ -106,6 +112,7 @@ For C++ example check out: [Multirotor](https://github.com/VertexStudio/AirSim/b
 For more info visit [AirSim APIs](https://github.com/Microsoft/AirSim/blob/master/docs/apis.md)
 
 ### Building AirSim
+
 Required if new changes were made to the [AirSim plugin](https://github.com/VertexStudio/AirSim).
 
 ```

@@ -77,3 +77,5 @@ DerivedDataCache/*
 /.vscode
 /*.code-workspace
 /Makefile
+
+/Plugins/AirSim
