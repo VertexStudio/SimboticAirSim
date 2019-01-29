@@ -78,14 +78,14 @@ Modify `$SIMBOTIC_ROOT/Config/AirSim/settings.json` to configure the simulation.
   "SettingsVersion": 1.2,
   "SimMode": "Multirotor",
   "Vehicles": {
-    "Drone1": {
+    "agent.0": {
       "VehicleType": "SimpleFlight",
       "X": 4,
       "Y": 0,
       "Z": -2,
       "Yaw": -180
     },
-    "Drone2": {
+    "agent.1": {
       "VehicleType": "SimpleFlight",
       "X": 8,
       "Y": 0,
@@ -104,10 +104,8 @@ Run script:
 
 ```
 cd $SIMBOTIC_ROOT/Scripts/Python
-python3 multiagent.py
+python multiagent.py
 ```
-
-For C++ example check out: [Multirotor](https://github.com/VertexStudio/AirSim/blob/3cff53b172fc1a3edd373d257f451dd388091799/Multirotor/main.cpp).
 
 For more info visit [AirSim APIs](https://github.com/Microsoft/AirSim/blob/master/docs/apis.md)
 
